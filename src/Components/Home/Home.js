@@ -11,13 +11,11 @@ const Home = () => {
       .then(data => setLeagues(data.leagues))
   }, [])
   // console.log(leagues)
-  const shortLeagues = leagues.splice(0, 15);
-
-  
+  const shortLeagues = leagues.splice(25, 15);
 
 
   return (
-    <div className="row m-2">
+    <div className="row me-4 ms-2">
       {
         shortLeagues.map(league => {
           return <Leagues league={league} />

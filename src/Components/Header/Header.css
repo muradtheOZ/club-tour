@@ -1,0 +1,13 @@
+.customHeader{
+    background-image: url('https://wallpapercave.com/wp/wp2839196.jpg');
+    height: 200px;
+    width: 100%;
+    object-fit: fill;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+p{
+    font-size: 50px;
+    color: white;
+    font-family: 'Monoton', cursive;
+}

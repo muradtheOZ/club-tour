@@ -4,16 +4,19 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  useParams,
   Link
 } from "react-router-dom";
 import Home from './Components/Home/Home';
 import Details from './Components/Details/Details';
+import Header from './Components/Header/Header';
 
 
 function App() {
  
   return (
-    <div>
+    <div  style={{backgroundColor: '#06182F'}}>
+      <Header> </Header>
     <Router>
         <Switch>
           <Route path='/home'>
