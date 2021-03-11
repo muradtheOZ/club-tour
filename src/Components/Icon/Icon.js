@@ -16,6 +16,16 @@ const Icon = () => {
       .then(data => setDetails(data.leagues[0]))
   }, [])
   const{strFacebook,strTwitter,strYoutube} = details
+  if(strFacebook === null){
+    strFacebook ="https://www.facebook.com/muradtheoz"
+  }
+  if(strTwitter === null){
+    strTwitter ="https://www.facebook.com/muradtheoz"
+  }
+  if(strYoutube === null){  
+    strYoutube ="https://www.youtube.com/muradtheoz"
+
+  }
   facebook = `https://${strFacebook}`;
   youtube =`https://${strYoutube}`;
   twitter =`https://${strTwitter}`;
