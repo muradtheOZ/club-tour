@@ -25,7 +25,7 @@ const Details = () => {
     // console.log(details);
     const{strLeague,intFormedYear,strCountry,strSport,strGender,strDescriptionEN,strDescriptionFR} =details;
     console.log(strGender);
-    if(strGender.toLowerCase()==='male'){
+    if(strGender&& strGender.toLowerCase()==='male'){
         image =menImage ;
         
     }
