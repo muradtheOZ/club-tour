@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faMapMarkerAlt,faFlag,faFutbol,faVenus} from '@fortawesome/free-solid-svg-icons'
+import {faMapMarkerAlt,faFlag,faFutbol,faVenus,faFacebook,faYoutube,faTwitter,faBowlingBall,faFacebookSquare} from '@fortawesome/free-solid-svg-icons'
 import { useParams } from 'react-router';
 import './Details.css'
 import menImage from '../../Images/male.png'
@@ -12,7 +12,8 @@ const Details = () => {
     const flag = <FontAwesomeIcon icon={ faFlag} />
     const sport = <FontAwesomeIcon icon={faFutbol}/>
     const gender = <FontAwesomeIcon icon={faVenus}/>
-    let image;
+    const fbImage = <FontAwesomeIcon icon={"fab","fabFaFacebookSquare"}/>
+    let image,facebook,youtube,twitter,website;
     
     const{id} = useParams()
     const [details, setDetails] = useState([])
@@ -23,9 +24,18 @@ const Details = () => {
       .then(data => setDetails(data.leagues[0]))
   }, [])
    
-  
-    const{strLeague,intFormedYear,strCountry,strSport,strGender,strDescriptionEN,strDescriptionFR} =details;
-    console.log(strGender);
+
+    const{strLeague,intFormedYear,strCountry,strSport,strGender,strDescriptionEN,strDescriptionFR,strFacebook,strTwitter,strYoutube,strWebsite} =details;
+    console.log(details);
+
+        if(strFacebook !== ""){
+        facebook = {strFacebook};
+        }
+    else{
+        facebook = 'www.facebook.com/muradtheoz';
+    }
+   
+    
     if(strGender&& strGender.toLowerCase()==='male'){
         image =menImage ;
         
@@ -52,6 +62,12 @@ const Details = () => {
         <p className="p-2"> {strDescriptionEN}</p>
         <p className="p-2">{strDescriptionFR}</p>
        
+        </div>
+        <div className="container justify-content-center">
+            <h2>this is h2</h2>
+        <a href={facebook}>{fbImage}this is fb link</a>
+        <a href="https://www.w3schools.com">Visit W3Schools.com!</a>
+
         </div>
         
         </div>
