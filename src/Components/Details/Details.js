@@ -6,6 +6,7 @@ import './Details.css'
 import menImage from '../../Images/male.png'
 import womenImage from '../../Images/female.png'
 import Header from '../Header/Header';
+import Icon from '../Icon/Icon';
 
 const Details = () => {
     const founded = <FontAwesomeIcon icon={faMapMarkerAlt}/>
@@ -25,15 +26,9 @@ const Details = () => {
   }, [])
    
 
-    const{strLeague,intFormedYear,strCountry,strSport,strGender,strDescriptionEN,strDescriptionFR,strFacebook,strTwitter,strYoutube,strWebsite} =details;
+    const{strLeague,intFormedYear,strCountry,strSport,strGender,strDescriptionEN,strDescriptionFR} =details;
     console.log(details);
 
-        if(strFacebook !== ""){
-        facebook = {strFacebook};
-        }
-    else{
-        facebook = 'www.facebook.com/muradtheoz';
-    }
    
     
     if(strGender&& strGender.toLowerCase()==='male'){
@@ -63,12 +58,7 @@ const Details = () => {
         <p className="p-2">{strDescriptionFR}</p>
        
         </div>
-        <div className="container justify-content-center">
-            <h2>this is h2</h2>
-        <a href={facebook}>{fbImage}this is fb link</a>
-        <a href="https://www.w3schools.com">Visit W3Schools.com!</a>
-
-        </div>
+        <Icon id={id}></Icon>
         
         </div>
      
