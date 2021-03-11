@@ -6,6 +6,7 @@ import './Details.css'
 import menImage from '../../Images/male.png'
 import womenImage from '../../Images/female.png'
 import Header from '../Header/Header';
+import Icon from '../Icon/Icon';
 
 const Details = () => {
     const founded = <FontAwesomeIcon icon={faMapMarkerAlt}/>
@@ -52,6 +53,7 @@ const Details = () => {
         <p className="p-2">{strDescriptionFR}</p>
        
         </div>
+        <Icon></Icon>
         
         </div>
      
