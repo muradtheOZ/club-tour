@@ -12,8 +12,7 @@ const Details = () => {
     const flag = <FontAwesomeIcon icon={ faFlag} />
     const sport = <FontAwesomeIcon icon={faFutbol}/>
     const gender = <FontAwesomeIcon icon={faVenus}/>
-    
-   
+    let image;
     
     const{id} = useParams()
     const [details, setDetails] = useState([])
@@ -25,24 +24,33 @@ const Details = () => {
   }, [])
     // console.log(details);
     const{strLeague,intFormedYear,strCountry,strSport,strGender,strDescriptionEN,strDescriptionFR} =details;
+    console.log(strGender);
+    if(strGender.toLowerCase()==='male'){
+        image =menImage ;
+        
+    }
+    else{
+        image =  womenImage;
+    }
     return (
         <div className="mainDetails">
             <Header id={id} > </Header>
-        <div className=" container pt-3 shadow-lg rounded d-flex container-xl customDetails  text-center pm-2 pe-2 mt-3">
-            <div >
-            <h1>{strLeague}</h1>
+        <div className=" row d-flex container pt-3 shadow-lg rounded d-flex container-xl customDetails pm-2 pe-2 mt-3">
+            <div className="col-md-6" >
+            <h1 style={{color:'#065B9B'}}>{strLeague}</h1>
             <p> {founded } Founded: {intFormedYear}</p>
             <p> {flag }Country: {strCountry}</p>
             <p>{sport }Sport Type: {strSport}</p>
             <p>{gender}Gender:{strGender}</p>
             </div>
-            <div>
-            <img src={menImage} alt=""/>
+            <div className="col-md-6">
+            <img src={image} alt=""/>
             </div>
         </div>
         <div className="container customDescription justify-text-center" >
-        <p className="p-2">{strDescriptionFR}</p>
         <p className="p-2"> {strDescriptionEN}</p>
+        <p className="p-2">{strDescriptionFR}</p>
+       
         </div>
         
         </div>
