@@ -22,7 +22,8 @@ const Details = () => {
       .then(res => res.json())
       .then(data => setDetails(data.leagues[0]))
   }, [])
-    // console.log(details);
+   
+  
     const{strLeague,intFormedYear,strCountry,strSport,strGender,strDescriptionEN,strDescriptionFR} =details;
     console.log(strGender);
     if(strGender&& strGender.toLowerCase()==='male'){
