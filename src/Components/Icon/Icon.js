@@ -15,14 +15,14 @@ const Icon = () => {
       .then(res => res.json())
       .then(data => setDetails(data.leagues[0]))
   }, [])
-  const{strFacebook,strTwitter,strYoutube} = details
-  if(strFacebook === null){
+  let {strFacebook,strTwitter,strYoutube} = details
+  if(strFacebook === ""){
     strFacebook ="https://www.facebook.com/muradtheoz"
   }
-  if(strTwitter === null){
+  if(strTwitter === ""){
     strTwitter ="https://www.facebook.com/muradtheoz"
   }
-  if(strYoutube === null){  
+  if(strYoutube === ""){  
     strYoutube ="https://www.youtube.com/muradtheoz"
 
   }
