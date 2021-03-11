@@ -1,0 +1,24 @@
+.customDetails img{
+    height: 200px;
+    width: 100%;
+    object-fit:contain;
+
+}
+.customDetails{
+    background-color: white;
+    color: gray;
+    margin: 0 auto;
+}
+.mainDetails{
+    background-color: #FD6A02;
+}
+.customDescription{
+    text-align: justify;
+}
+.customDescription p{
+    font-size:18px;
+    color:whitesmoke;
+}
+.customCard{
+    margin-top: 10px;
+}

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Header from '../Header/Header';
 import Leagues from '../Leagues/Leagues';
 import './Home.css'
 
@@ -15,14 +16,21 @@ const Home = () => {
 
 
   return (
-    <div className="row me-4 ms-2">
+    <div className="bg-blues">
+        <div className="m-3 p-2">
+        <Header> </Header>
+       <div className="row" >
       {
         shortLeagues.map(league => {
-          return <Leagues league={league} />
+          return <Leagues key={league.idLeague} league={league} />
         })
       }
 
     </div>
+    </div>
+    </div>
+  
+    
   );
 };
 

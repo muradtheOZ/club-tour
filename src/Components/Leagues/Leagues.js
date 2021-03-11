@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Header from '../Header/Header';
 import './Leagues.css'
 
 const Leagues = (props) => {
@@ -14,7 +15,7 @@ const Leagues = (props) => {
       .then(res => res.json())
       .then(data => setLeaguesDetails(data.leagues[0]))
   }, [])
-   console.log(leaguesDetails);
+//    console.log(leaguesDetails);
    const {strBadge} = leaguesDetails;
    
     return (
@@ -24,7 +25,7 @@ const Leagues = (props) => {
             <div className="card-body">
              <h4 className="card-title">{strLeague}</h4>
              <h5 className="card-text" >Sports Type: {strSport}</h5>
-            <Link  className ="btn btn-primary" to ={`/details/${idLeague}`}>Explorer</Link>
+             <button  className="btn btn-primary"> <Link className="customLink" to=  {`/details/${idLeague}`}> Explore </Link> </button>
 
             </div>
             </div>

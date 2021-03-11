@@ -1,0 +1,10 @@
+:root {
+    --blue: #06152C;
+    --orange: #FD6A02;
+  }
+  .mainBody{
+      background-color: #06152C;
+  }
+  .detailsBody{
+      background-color: #FD6A02;
+  }
